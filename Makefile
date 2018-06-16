@@ -1,6 +1,6 @@
-SCHEME = XCTestTemp
+SCHEME = StringPlusPath
 
-.PHONY: build test lint
+.PHONY: build lint
 
 ci: lint test
 
