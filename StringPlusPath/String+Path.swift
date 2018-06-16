@@ -28,7 +28,7 @@ public extension String {
     public var standardizingPath: String {
         return (self as NSString).standardizingPath
     }
-    
+
     public var pathComponents: [String] {
         return (self as NSString).pathComponents
     }
