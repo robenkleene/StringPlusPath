@@ -1,8 +1,8 @@
 SCHEME = StringPlusPath
 
-.PHONY: build lint
+.PHONY: build test lint
 
-ci: lint test
+ci: lint build
 
 lint:
 	swiftlint
