@@ -2,7 +2,7 @@ SCHEME = StringPlusPath
 
 .PHONY: build test lint autocorrect swiftformat swiftlint_autocorrect bootstrap
 
-ci: lint build
+ci: build
 ac: autocorrect
 autocorrect: swiftformat swiftlint_autocorrect
 
@@ -26,3 +26,4 @@ test:
 		-alltargets \
 		-configuration Debug \
 		-scheme $(SCHEME)
+
