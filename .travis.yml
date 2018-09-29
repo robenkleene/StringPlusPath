@@ -14,4 +14,12 @@ before_script:
 before_deploy:
 - carthage build --no-skip-current
 - carthage archive $FRAMEWORK_NAME
-
+deploy:
+  provider: releases
+  api_key:
+    secure: oojR7SuUjX42Q44C3pJcGNGt4bINtwdbtYEZKGr+bJIpfCLbORbt7GYl74A5QK3oFVZ20+sD6I1JM4yDy9wxPtbV5JElwcYgoTXZpe/xE3HYD8/ALXzsHQce7A85ghYvOawTw4NLZxuzPuCJLZluexl8C8cY4C9Nb+9RYwwqEzCw4YtyMSKenI9W0mJAuayq3OKimxC9Qk7VDiQ0MzgvtuCGXQjb4CfT+2zv7+kv2DinelxkFUmESjUoCM3hfvlKp1be4YuF4fvWWt7cz78gDhshcU+bWvsfumu7tL1KH0KnBSivCXwr6J1T3GhonvrDEE+LztEwQqL0X7Ipt4bFvq8RrqIB57KBS5Dtey1HEWdl9omSGiT2qnApYy7KS7zrurJzf6FBAlQIL2IaRdSJL9LucA+Bae2ArxJxNR5hwVL7dVfG5pQb1e7OQEnWH23DPTeSIWY3v4AFhgzh85bq4p7c98lGOX1WnKdoriiJ+Kxhm7gAfxxdgUi/b/oWVMsW1iT3J/x/ZUt9QOlrkzmoWUGO4VrHSc85BdxJ9OqgdyK1ILkj65h4r8rLyqT74S9ome+pf/3LywkjrotZj/8GQbkh8cHhWfiXZS+nKLiX4OVnPR3Uv+TcgYwMkFL0VUp5kfSRIlKtouXgdWtOtQ3iz/jAQUE8SiKME5x2Xb1lz3Q=
+  file: StringPlusPath.framework.zip
+  skip_cleanup: true
+  on:
+    repo: robenkleene/StringPlusPath
+    tags: true
