@@ -10,11 +10,17 @@ import Foundation
 
 public extension String {
     public func appendingPathComponent(_ path: String) -> String {
-        return (self as NSString).appendingPathComponent(path)
+        // Writing this as `(self as NSString).appendingPathComponent(path)` causes a memory leak
+        let string = self as NSString
+        let result = string.appendingPathComponent(path)
+        return result
     }
 
     public func appendingPathExtension(_ ext: String) -> String? {
-        return (self as NSString).appendingPathExtension(ext)
+        // Writing this as `(self as NSString).appendingPathExtension(ext)` causes a memory leak
+        let string = self as NSString
+        let result = string.appendingPathExtension(ext)
+        return result
     }
 
     public var deletingLastPathComponent: String {
