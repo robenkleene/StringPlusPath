@@ -12,13 +12,15 @@ public extension String {
     public func appendingPathComponent(_ path: String) -> String {
         // Writing this as `(self as NSString).appendingPathComponent(path)` causes a memory leak
         let string = self as NSString
-        return string.appendingPathComponent(path)
+        let result = string.appendingPathComponent(path)
+        return result
     }
 
     public func appendingPathExtension(_ ext: String) -> String? {
         // Writing this as `(self as NSString).appendingPathExtension(ext)` causes a memory leak
         let string = self as NSString
-        return string.appendingPathExtension(ext)
+        let result = string.appendingPathExtension(ext)
+        return result
     }
 
     public var deletingLastPathComponent: String {
