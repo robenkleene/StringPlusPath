@@ -1,6 +1,6 @@
 SCHEME = StringPlusPath
 
-.PHONY: build test lint autocorrect swiftformat swiftlint_autocorrect bootstrap loc
+.PHONY: build test lint autocorrect swiftformat swiftlint_autocorrect loc archive
 
 ci: build
 ac: autocorrect
@@ -20,8 +20,9 @@ build:
 		-alltargets \
 		-configuration Debug
 
-bootstrap:
-	carthage bootstrap
+archive:
+	carthage build --no-skip-current
+	carthage archive StringPlusPath
 
 test:
 	xcodebuild test \
