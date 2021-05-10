@@ -1,1 +1,1 @@
-# `StringPlusPath` [![Build Status](https://travis-ci.org/robenkleene/StringPlusPath.svg?branch=master)](https://travis-ci.org/robenkleene/StringPlusPath)
+# `StringPlusPath` ![Status](https://github.com/robenkleene/stringpluspath/actions/workflows/ci.yml/badge.svg) ![Status](https://github.com/robenkleene/stringpluspath/actions/workflows/release.yml/badge.svg)
