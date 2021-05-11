@@ -1,4 +1,4 @@
-îame: Release
+name: Release
 on:
   push:
     tags:
